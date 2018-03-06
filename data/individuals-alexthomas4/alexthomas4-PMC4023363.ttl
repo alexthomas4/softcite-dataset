@@ -18,14 +18,140 @@
 # https://howisonlab.github.io/softcite-pdf-files/pdf-files/pmc_oa_files/PMC4023363.pdf
 pmcid:PMC4023363 rdf:type bioj:article ;
 
+citec:has_in_text_mention pmcid:PMC4023363_AT01;
+citec:has_in_text_mention pmcid:PMC4023363_AT02;
+
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
           ca:hasCoder "alexthomas4" ;
           ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
-                           citec:isPresent FIXME; # true/false
+                           citec:isPresent true; # true/false
                          ] ;
         ] ;
 
-    
-    citec:has_in_text_mention FIXME ; # name in text mention like pmcid:PMC3028497_JC01, no quotes
+
+     # name in text mention like pmcid:PMC3028497_JC01, no quotes
+.
+pmcid:PMC4023363_AT01: rdf:type citec:in_text_mention; # use in text mention name
+    citec:full_quote """ There are emerging technologies such as ribosome profiling that can now be employed to determine at a genome-wide level changes in mRNA translation.84,112Ribosome profiling provides codon-based resolution of mRNA translation, which represents a significant advancement over first generation technologies for assessing global changes in protein synthesis""" ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software"""  ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled the result""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """ribosome profiling""";
+                            # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                            # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                          # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                           # use triple quotes
+                         ] ;
+        ] ;
+
+.
+pmcid:PMC4023363_AT02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Ribosome profiling provides codon-based resolution of mRNA translation, which represents a significant advancement over first generation technologies for assessing global changes in protein synthesis such as microarray-based polysome profiling. """ ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software"""  ; # put one in triple quotes
+                           ca:certainty 8 ; # integer
+                           ca:memo """older technologies""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """microassay-based polysome profiling""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                           # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                            # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                           # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                            # use triple quotes
+                         ] ;
+        ] ;
+
 .
