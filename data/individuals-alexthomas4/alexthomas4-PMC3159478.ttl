@@ -1,0 +1,87 @@
+
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+@prefix pmcid: <https://www.ncbi.nlm.nih.gov/pmc/articles/> .
+@prefix pmcid-cited: <http://james.howison.name/ontologies/pmcid-journal-sample-citation#> .
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+# https://howisonlab.github.io/softcite-pdf-files/pdf-files/pmc_oa_files/PMC3159478.pdf
+pmcid:PMC3159478 rdf:type bioj:article ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+
+
+    citec:has_in_text_mention pmcid:PMC3159478_AT01 ;
+    citec:has_in_text_mention pmcid:PMC3159478_AT02 ;
+    citec:has_in_text_mention pmcid:PMC3159478_AT03 ;
+
+     # name in text mention like pmcid:PMC3028497_JC01, no quotes
+.
+pmcid:PMC3159478_AT01 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Anisotropy  experiments  were  performed  using  aFluoromax-3 fluorometer (HORIBA Jobin Yvon) as desc-ribed previously (25).""" ; # use triple quotes
+
+    citec:on_pdf_page 3  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """A type of microscope used in the experiment""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC3159478_AT02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Experiments were performed on a prism-based totalinternal reflection fluorescence microscope (27,28) em-ploying a 532 nm diode laser""" ; # use triple quotes
+
+    citec:on_pdf_page 3  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Another type of microscope used in the experiment""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC3159478_AT03 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Based on these results, we have developed a new modelfor DNA unwinding by MCM termed the SEW model,resembling a spool of thread for wrapping the 50-tailaround  the  exterior  surface  (Figure  5). """ ; # use triple quotes
+
+    citec:on_pdf_page 10  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "alexthomas4" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """algorithm""" ; # put one in triple quotes
+                           ca:certainty 5 ; # integer
+                           ca:memo """Appears to be a new model developed based on the results of the experiment""" ; # use triple quotes
+                         ] ;
+        ] ;
+
+.

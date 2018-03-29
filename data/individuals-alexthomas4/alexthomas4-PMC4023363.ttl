@@ -32,7 +32,7 @@ citec:has_in_text_mention pmcid:PMC4023363_AT02;
 
      # name in text mention like pmcid:PMC3028497_JC01, no quotes
 .
-pmcid:PMC4023363_AT01: rdf:type citec:in_text_mention; # use in text mention name
+pmcid:PMC4023363_AT01 rdf:type citec:in_text_mention; # use in text mention name
     citec:full_quote """ There are emerging technologies such as ribosome profiling that can now be employed to determine at a genome-wide level changes in mRNA translation.84,112Ribosome profiling provides codon-based resolution of mRNA translation, which represents a significant advancement over first generation technologies for assessing global changes in protein synthesis""" ; # use triple quotes
 
     citec:on_pdf_page 7  ; # integer
